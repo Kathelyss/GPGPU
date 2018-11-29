@@ -363,7 +363,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfr-NS-MyD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                                    <rect key="frame" x="3" y="0.0" width="64" height="30"/>
                                                     <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                                     <color key="textColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -371,8 +371,8 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="nfr-NS-MyD" firstAttribute="leading" secondItem="xQa-qF-bTU" secondAttribute="leading" id="0Ru-hS-zDF"/>
-                                            <constraint firstAttribute="trailing" secondItem="nfr-NS-MyD" secondAttribute="trailing" id="BS1-dW-uWe"/>
+                                            <constraint firstItem="nfr-NS-MyD" firstAttribute="leading" secondItem="xQa-qF-bTU" secondAttribute="leading" constant="3" id="0Ru-hS-zDF"/>
+                                            <constraint firstAttribute="trailing" secondItem="nfr-NS-MyD" secondAttribute="trailing" constant="3" id="BS1-dW-uWe"/>
                                             <constraint firstItem="nfr-NS-MyD" firstAttribute="top" secondItem="xQa-qF-bTU" secondAttribute="top" id="Rzb-o1-XYF"/>
                                             <constraint firstAttribute="bottom" secondItem="nfr-NS-MyD" secondAttribute="bottom" id="isu-qL-rzL"/>
                                         </constraints>
