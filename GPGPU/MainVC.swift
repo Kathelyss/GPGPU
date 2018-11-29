@@ -52,7 +52,7 @@ class MainVC: UIViewController {
     }
     
     func random(from: Int, to: Int) -> DataType {
-        let randomNumber = Int(arc4random_uniform(UInt32(to))) + from
+        let randomNumber = Int(arc4random_uniform(UInt32(to))) + from // fix me!!!
         return DataType(randomNumber)
     }
     
