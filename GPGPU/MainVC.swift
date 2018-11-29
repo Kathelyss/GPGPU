@@ -23,7 +23,14 @@ class MainVC: UIViewController {
     }
     
     @IBAction func tapSumButton(_ sender: UIButton) {
-        resultTextView.text += sumElements(arrayOfNumbers: array)
+        if array.isEmpty {
+            let ac = UIAlertController(title: "Ай-яй!", message: "Сгенерируйте массив!", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+            ac.addAction(action)
+            self.present(ac, animated: true, completion: nil)
+        } else {
+            resultTextView.text += sumElements(arrayOfNumbers: array)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,13 +38,31 @@ class MainVC: UIViewController {
             vc.onClose = { [weak self] vc in
                 self?.array = (0..<vc.countOfElements).map { _ in (self?.random(from: vc.intervalFrom,
                                                                                 to: vc.intervalTo))! }
-                self?.generateArrayButton.setTitle("Массив сгенерирован", for: .normal)
+                self?.generateArrayButton.setTitle("Посмотреть массив", for: .normal)
+            }
+        } else if let vc = segue.destination as? ArrayVC {
+            vc.array = array
+            vc.onClose = { [weak self] clear in
+                if clear {
+                    self?.array = []
+                    self?.generateArrayButton.setTitle("Сгенерировать массив", for: .normal)
+                }
             }
         }
     }
     
     func random(from: Int, to: Int) -> DataType {
-        let randomNumber = Int(arc4random_uniform(UInt32(to + from))) - from
+        let randomNumber = Int(arc4random_uniform(UInt32(to))) + from
         return DataType(randomNumber)
     }
+    
+    @IBAction func tapGenerateArrayButton(_ sender: UIButton) {
+        if array.isEmpty {
+            performSegue(withIdentifier: "ToGenerateArray", sender: self)
+        } else {
+            performSegue(withIdentifier: "ToArrayDetails", sender: self)
+        }
+    }
+    
+    
 }
