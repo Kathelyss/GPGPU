@@ -23,14 +23,14 @@
                                 <color key="textColor" red="0.42602712372900498" green="0.20248448467213154" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Действия с элементами массива:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RX-uh-zpU">
-                                <rect key="frame" x="20" y="141" width="335" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Действия с элементами массива:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RX-uh-zpU">
+                                <rect key="frame" x="20" y="141" width="335" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <color key="textColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKm-cJ-5NL">
-                                <rect key="frame" x="20" y="176.5" width="157.5" height="40"/>
+                                <rect key="frame" x="20" y="175" width="157.5" height="40"/>
                                 <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GP7-ic-H3y"/>
@@ -52,7 +52,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zne-bA-gA5">
-                                <rect key="frame" x="197.5" y="176.5" width="157.5" height="40"/>
+                                <rect key="frame" x="197.5" y="175" width="157.5" height="40"/>
                                 <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sgH-nr-RaQ"/>
@@ -74,7 +74,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7x-Zu-gBN">
-                                <rect key="frame" x="20" y="236.5" width="157.5" height="40"/>
+                                <rect key="frame" x="20" y="235" width="157.5" height="40"/>
                                 <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LcM-OW-q3X"/>
@@ -118,7 +118,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSg-VJ-cPh">
-                                <rect key="frame" x="197.5" y="236.5" width="157.5" height="40"/>
+                                <rect key="frame" x="197.5" y="235" width="157.5" height="40"/>
                                 <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="0om-as-c5Y"/>
@@ -139,10 +139,33 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Здесь будет результат вычислений" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-Zj-ard">
-                                <rect key="frame" x="20" y="296.5" width="335" height="330.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-Zj-ard">
+                                <rect key="frame" x="20" y="295" width="335" height="332"/>
+                                <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="0.20071703767123289" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Здесь будет результат вычислений: 
+Ответ CPU - … 
+Скорость - …
+Память- …
+***
+Ответ GPU - … 
+Скорость - …
+Память - …
+***
+and so on
+_
+_
+_
+_
+_
+_
+_
+_
+_
+_
+_
+_</string>
+                                <color key="textColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
