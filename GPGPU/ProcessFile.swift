@@ -1,5 +1,5 @@
 //
-//  SumCalculation.swift
+//  ProcessFile.swift
 //  GPGPU
 //
 //  Created by kathelyss on 29/10/2018.
@@ -9,18 +9,15 @@
 import Foundation
 import Metal
 
-let countOfElementsInArray = 10_000_000
-let elementsPerSum = 10_000
-
-// Data type has to be the same as in the shader
 typealias DataType = CInt
 
-func process() {
+func sumElements(arrayOfNumbers: [DataType]) -> String {
+    let countOfElementsInArray = arrayOfNumbers.count
+    let elementsPerSum = Int(arrayOfNumbers.count / 1000) > 10 ? Int(arrayOfNumbers.count / 1000) : 10
     let device = MTLCreateSystemDefaultDevice()!
-    let arraySumm = device.makeDefaultLibrary()!.makeFunction(name: "arraySumm")!
-    let pipeline = try! device.makeComputePipelineState(function: arraySumm)
+    let arrayProcessFunction = device.makeDefaultLibrary()!.makeFunction(name: "arrayProcessFunction")!
+    let pipeline = try! device.makeComputePipelineState(function: arrayProcessFunction)
     
-    let arrayOfNumbers = (0..<countOfElementsInArray).map { _ in DataType(arc4random_uniform(100)) }
     var dataCount = CUnsignedInt(countOfElementsInArray)
     var elementsPerSumC = CUnsignedInt(elementsPerSum)
     // Number of individual results = count / elementsPerSum (rounded up)
@@ -35,12 +32,12 @@ func process() {
     // Our results in convenient form to compute the actual result later
     let pointer = resultsBuffer?.contents().assumingMemoryBound(to: DataType.self)
     let results = UnsafeBufferPointer<DataType>(start: pointer, count: resultsCount)
-    
+
     guard let queue = device.makeCommandQueue(),
         let cmds = queue.makeCommandBuffer(),
         let encoder = cmds.makeComputeCommandEncoder() else {
             print("Error! Cannot get queue, or cmds, or encoder!")
-            return
+            return "Error!"
     }
     
     encoder.setComputePipelineState(pipeline)
@@ -65,17 +62,18 @@ func process() {
     
     var calculationStartTime, calculationEndTime: UInt64
     var result: DataType = 0
-    
+
     calculationStartTime = mach_absolute_time()
     cmds.commit()
     cmds.waitUntilCompleted()
     for element in results {
         result += element
     }
-    
+
     calculationEndTime = mach_absolute_time()
+    let gpuCalculationTime = Double(calculationEndTime - calculationStartTime) / Double(NSEC_PER_SEC)
+    var resultText = "Сумма элементов массива:\nРезультат GPU: \(result)\nВремя: \(gpuCalculationTime)"
     
-    print("GPU result: \(result), time: \(Double(calculationEndTime - calculationStartTime) / Double(NSEC_PER_SEC))")
     result = 0
     
     calculationStartTime = mach_absolute_time()
@@ -86,5 +84,8 @@ func process() {
     }
     calculationEndTime = mach_absolute_time()
     
-    print("CPU result: \(result), time: \(Double(calculationEndTime - calculationStartTime) / Double(NSEC_PER_SEC))")
+    let cpuCalculationTime = Double(calculationEndTime - calculationStartTime) / Double(NSEC_PER_SEC)
+    resultText += "\n\nРезультат CPU: \(result)\nВремя: \(cpuCalculationTime)\n-----\n"
+    
+    return resultText
 }
