@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9458FE2321B02A770018ACDA /* SumCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458FE2221B02A770018ACDA /* SumCalculation.swift */; };
+		9458FE2721B046A40018ACDA /* MetalFile.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9458FE2621B046A40018ACDA /* MetalFile.metal */; };
 		94DF51F421ADC03300713183 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF51F321ADC03300713183 /* AppDelegate.swift */; };
 		94DF51F621ADC03300713183 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DF51F521ADC03300713183 /* ViewController.swift */; };
 		94DF51F921ADC03300713183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DF51F721ADC03300713183 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9458FE2221B02A770018ACDA /* SumCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SumCalculation.swift; sourceTree = "<group>"; };
+		9458FE2621B046A40018ACDA /* MetalFile.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalFile.metal; sourceTree = "<group>"; };
 		94DF51F021ADC03300713183 /* GPGPU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPGPU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DF51F321ADC03300713183 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94DF51F521ADC03300713183 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				94DF51FA21ADC03600713183 /* Assets.xcassets */,
 				94DF51FC21ADC03600713183 /* LaunchScreen.storyboard */,
 				94DF51FF21ADC03600713183 /* Info.plist */,
+				9458FE2221B02A770018ACDA /* SumCalculation.swift */,
+				9458FE2621B046A40018ACDA /* MetalFile.metal */,
 			);
 			path = GPGPU;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9458FE2721B046A40018ACDA /* MetalFile.metal in Sources */,
 				94DF51F621ADC03300713183 /* ViewController.swift in Sources */,
 				94DF51F421ADC03300713183 /* AppDelegate.swift in Sources */,
+				9458FE2321B02A770018ACDA /* SumCalculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
