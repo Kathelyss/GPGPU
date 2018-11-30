@@ -71,8 +71,8 @@ func sumElements(arrayOfNumbers: [DataType]) -> String {
     }
 
     calculationEndTime = mach_absolute_time()
-    let gpuCalculationTime = Double(calculationEndTime - calculationStartTime) / Double(NSEC_PER_SEC)
-    var resultText = "Сумма элементов массива:\nРезультат GPU: \(result)\nВремя: \(gpuCalculationTime)"
+    let gpuCalculationTime = Double(calculationEndTime - calculationStartTime) / 1_000_000
+    var resultText = "Сумма элементов массива = \(result)\nВремя GPU: \(gpuCalculationTime) мс"
     
     result = 0
     
@@ -84,8 +84,16 @@ func sumElements(arrayOfNumbers: [DataType]) -> String {
     }
     calculationEndTime = mach_absolute_time()
     
-    let cpuCalculationTime = Double(calculationEndTime - calculationStartTime) / Double(NSEC_PER_SEC)
-    resultText += "\n\nРезультат CPU: \(result)\nВремя: \(cpuCalculationTime)\n-----\n"
-    
+    let cpuCalculationTime = Double(calculationEndTime - calculationStartTime) / 1_000_000
+    resultText += "\nВремя CPU: \(cpuCalculationTime) мс\n"
+    resultText += writeWinner(gpuTime: gpuCalculationTime, cpuTime: cpuCalculationTime)
     return resultText
+}
+
+func writeWinner(gpuTime: Double, cpuTime: Double) -> String {
+    if gpuTime > cpuTime {
+        return "CPU быстрее GPU в \(String(format: "%.2f", (gpuTime / cpuTime))) раз\n\n"
+    } else {
+        return "GPU быстрее CPU в \(String(format: "%.2f", (cpuTime / gpuTime))) раз\n\n"
+    }
 }

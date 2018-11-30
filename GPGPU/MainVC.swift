@@ -24,8 +24,8 @@ class MainVC: UIViewController {
     
     @IBAction func tapSumButton(_ sender: UIButton) {
         if array.isEmpty {
-            let ac = UIAlertController(title: "Ай-яй!", message: "Сгенерируйте массив!", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+            let ac = UIAlertController(title: "Так не пойдёт", message: "Сгенерируйте массив", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Понятно", style: .cancel, handler: nil)
             ac.addAction(action)
             self.present(ac, animated: true, completion: nil)
         } else {
@@ -35,10 +35,12 @@ class MainVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? GenerateArrayVC {
-            vc.onClose = { [weak self] vc in
-                self?.array = (0..<vc.countOfElements).map { _ in (self?.random(from: vc.intervalFrom,
-                                                                                to: vc.intervalTo))! }
-                self?.generateArrayButton.setTitle("Посмотреть массив", for: .normal)
+            vc.onClose = { [weak self] array in
+                guard let self = self else { print("Error! No self line \(#line)")
+                    return
+                }
+                self.array = array
+                self.generateArrayButton.setTitle("Посмотреть массив", for: .normal)
             }
         } else if let vc = segue.destination as? ArrayVC {
             vc.array = array
@@ -49,11 +51,6 @@ class MainVC: UIViewController {
                 }
             }
         }
-    }
-    
-    func random(from: Int, to: Int) -> DataType {
-        let randomNumber = Int(arc4random_uniform(UInt32(to))) + from // fix me!!!
-        return DataType(randomNumber)
     }
     
     @IBAction func tapGenerateArrayButton(_ sender: UIButton) {

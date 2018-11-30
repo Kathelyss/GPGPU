@@ -273,12 +273,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MnD-yc-USf">
+                                <rect key="frame" x="50" y="393" width="220" height="2"/>
+                                <color key="progressTintColor" red="0.16331754979394486" green="1" blue="0.38818574863642807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="MnD-yc-USf" firstAttribute="centerY" secondItem="h6N-G0-tTg" secondAttribute="centerY" constant="100" id="45D-lI-UhS"/>
                             <constraint firstItem="0GM-3V-zId" firstAttribute="centerY" secondItem="h6N-G0-tTg" secondAttribute="centerY" constant="-100" id="OzE-OW-zUx"/>
+                            <constraint firstItem="MnD-yc-USf" firstAttribute="width" secondItem="0GM-3V-zId" secondAttribute="width" id="dmP-4i-VmJ"/>
                             <constraint firstItem="0GM-3V-zId" firstAttribute="leading" secondItem="h6N-G0-tTg" secondAttribute="leading" constant="50" id="hlE-Df-e1Q"/>
                             <constraint firstItem="h6N-G0-tTg" firstAttribute="trailing" secondItem="0GM-3V-zId" secondAttribute="trailing" constant="50" id="qJf-sz-zo0"/>
+                            <constraint firstItem="MnD-yc-USf" firstAttribute="centerX" secondItem="h6N-G0-tTg" secondAttribute="centerX" id="xM5-18-yz3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h6N-G0-tTg"/>
                     </view>
@@ -287,6 +294,7 @@
                         <outlet property="countOfElementsTextField" destination="1V2-PM-u8Y" id="YiR-FZ-gFt"/>
                         <outlet property="intervalFromTextField" destination="msn-KC-M4p" id="exD-iF-kEA"/>
                         <outlet property="intervalToTextField" destination="oVW-Y1-Urn" id="Dfc-FS-W15"/>
+                        <outlet property="progressView" destination="MnD-yc-USf" id="COy-Lu-lKz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmU-bm-qaH" userLabel="First Responder" sceneMemberID="firstResponder"/>

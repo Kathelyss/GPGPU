@@ -17,26 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sapphire_dribble_2" translatesAutoresizingMaskIntoConstraints="NO" id="lGe-Dx-xEt">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="super_icon" translatesAutoresizingMaskIntoConstraints="NO" id="30o-KZ-CzX">
+                                <rect key="frame" x="0.0" y="134" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="30o-KZ-CzX" secondAttribute="height" multiplier="1:1" id="8Af-JF-tGz"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPGPU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvU-Uf-emt">
-                                <rect key="frame" x="20" y="70" width="280" height="124"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="224"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Kathelyss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-3P-AfN">
+                                <rect key="frame" x="0.0" y="424" width="320" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.87309223413467407" green="0.73682171106338501" blue="0.92259925603866577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.83336275815963745" green="0.7214323878288269" blue="0.89905232191085815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lGe-Dx-xEt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5Em-y7-tFI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="uvU-Uf-emt" secondAttribute="bottom" constant="100" id="Ksl-Gb-sug"/>
-                            <constraint firstItem="lGe-Dx-xEt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PaY-1I-Yu4"/>
+                            <constraint firstItem="hnl-3P-AfN" firstAttribute="leading" secondItem="uvU-Uf-emt" secondAttribute="leading" id="0hb-mn-MJW"/>
+                            <constraint firstItem="hnl-3P-AfN" firstAttribute="top" secondItem="uvU-Uf-emt" secondAttribute="bottom" constant="130" id="EoL-To-mZE"/>
+                            <constraint firstItem="30o-KZ-CzX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FtJ-ep-Yft"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="uvU-Uf-emt" secondAttribute="bottom" id="Ksl-Gb-sug"/>
+                            <constraint firstItem="30o-KZ-CzX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OaG-xJ-uuS"/>
                             <constraint firstItem="uvU-Uf-emt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="doH-ag-A1t"/>
-                            <constraint firstItem="uvU-Uf-emt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fYt-2f-X58"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lGe-Dx-xEt" secondAttribute="trailing" id="jc8-8X-k5S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uvU-Uf-emt" secondAttribute="trailing" constant="20" id="kxg-tI-2M8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lGe-Dx-xEt" secondAttribute="bottom" id="yD8-eu-onI"/>
+                            <constraint firstItem="hnl-3P-AfN" firstAttribute="trailing" secondItem="uvU-Uf-emt" secondAttribute="trailing" id="es1-Qo-Lu0"/>
+                            <constraint firstItem="uvU-Uf-emt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fYt-2f-X58"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uvU-Uf-emt" secondAttribute="trailing" id="kxg-tI-2M8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30o-KZ-CzX" secondAttribute="trailing" id="xUT-nn-plN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -47,6 +58,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sapphire_dribble_2" width="400" height="600"/>
+        <image name="super_icon" width="479" height="483"/>
     </resources>
 </document>
