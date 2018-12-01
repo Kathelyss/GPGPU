@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  GPGPU
-//
-//  Created by kathelyss on 27/10/2018.
-//  Copyright © 2018 Екатерина Рыжова. All rights reserved.
-//
-
 import UIKit
 
 class MainVC: UIViewController {
@@ -36,7 +28,7 @@ class MainVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? GenerateArrayVC {
             vc.onClose = { [weak self] array in
-                guard let self = self else { print("Error! No self line \(#line)")
+                guard let self = self else { print("Error! No 'self' at line \(#line)")
                     return
                 }
                 self.array = array

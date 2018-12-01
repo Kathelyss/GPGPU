@@ -1,11 +1,3 @@
-//
-//  GenerateArrayVC.swift
-//  GPGPU
-//
-//  Created by kathelyss on 29/11/2018.
-//  Copyright © 2018 Екатерина Рыжова. All rights reserved.
-//
-
 import UIKit
 
 class GenerateArrayVC: UIViewController {

@@ -1,17 +1,9 @@
-//
-//  MetalFile.metal
-//  GPGPU
-//
-//  Created by kathelyss on 29/10/2018.
-//  Copyright © 2018 Екатерина Рыжова. All rights reserved.
-//
-
 #include <metal_stdlib>
 using namespace metal;
 
 typedef int DataType;
 
-kernel void arrayProcessFunction(const device DataType* data [[ buffer(0) ]],
+kernel void shader(const device DataType* data [[ buffer(0) ]],
                                  const device uint& dataLength [[ buffer(1) ]],
                                  device DataType* sums [[ buffer(2) ]],
                                  const device uint& elementsPerSum [[ buffer(3) ]],
