@@ -19,13 +19,13 @@
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKm-cJ-5NL">
                                 <rect key="frame" x="16" y="88" width="288" height="40"/>
-                                <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.44497333900000002" green="0.4972876369" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GP7-ic-H3y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
                                 <state key="normal" title="Сумма элементов массива">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -44,13 +44,13 @@
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7x-Zu-gBN">
                                 <rect key="frame" x="16" y="136" width="288" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.44497333900000002" green="0.4972876369" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LcM-OW-q3X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
                                 <state key="normal" title="Сортировка по возрастанию">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -66,13 +66,13 @@
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMF-IY-oH0">
                                 <rect key="frame" x="16" y="40" width="288" height="40"/>
-                                <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.44497333900000002" green="0.4972876369" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="r7j-em-NxR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
                                 <state key="normal" title="Сгенерировать массив">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -89,31 +89,9 @@
                                     <action selector="tapGenerateArrayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXE-n4-7SE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSg-VJ-cPh">
-                                <rect key="frame" x="16" y="184" width="288" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="0om-as-c5Y"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
-                                <state key="normal" title="Фильтр">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                        <color key="value" red="0.21357544019999999" green="0.099191335460000002" blue="0.5116394353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="Здесь будет результат вычислений" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-Zj-ard">
-                                <rect key="frame" x="16" y="232" width="288" height="320"/>
-                                <color key="backgroundColor" red="0.40784313729999999" green="0.4549019608" blue="0.90588235289999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="184" width="288" height="368"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -128,28 +106,25 @@
                         <constraints>
                             <constraint firstItem="hJ2-Zj-ard" firstAttribute="leading" secondItem="x7x-Zu-gBN" secondAttribute="leading" id="1Bt-IS-n1f"/>
                             <constraint firstItem="EMF-IY-oH0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7HJ-AG-Bbi"/>
-                            <constraint firstItem="sSg-VJ-cPh" firstAttribute="trailing" secondItem="x7x-Zu-gBN" secondAttribute="trailing" id="8yM-Hu-IEj"/>
                             <constraint firstItem="x7x-Zu-gBN" firstAttribute="leading" secondItem="XKm-cJ-5NL" secondAttribute="leading" id="BN2-0L-Zbc"/>
                             <constraint firstItem="XKm-cJ-5NL" firstAttribute="top" secondItem="EMF-IY-oH0" secondAttribute="bottom" constant="8" id="DTk-AV-xEJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hJ2-Zj-ard" secondAttribute="bottom" constant="16" id="FeL-fm-hSg"/>
-                            <constraint firstItem="hJ2-Zj-ard" firstAttribute="top" secondItem="sSg-VJ-cPh" secondAttribute="bottom" constant="8" id="HW5-KK-YZk"/>
+                            <constraint firstItem="hJ2-Zj-ard" firstAttribute="top" secondItem="x7x-Zu-gBN" secondAttribute="bottom" constant="8" id="Fru-24-U04"/>
+                            <constraint firstItem="hJ2-Zj-ard" firstAttribute="trailing" secondItem="x7x-Zu-gBN" secondAttribute="trailing" id="SaC-FX-Unk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EMF-IY-oH0" secondAttribute="trailing" constant="16" id="U1l-fa-coW"/>
-                            <constraint firstItem="hJ2-Zj-ard" firstAttribute="trailing" secondItem="sSg-VJ-cPh" secondAttribute="trailing" id="d5C-4X-eON"/>
                             <constraint firstItem="x7x-Zu-gBN" firstAttribute="top" secondItem="XKm-cJ-5NL" secondAttribute="bottom" constant="8" id="f3Z-GS-3Ac"/>
                             <constraint firstItem="x7x-Zu-gBN" firstAttribute="trailing" secondItem="XKm-cJ-5NL" secondAttribute="trailing" id="gmr-wC-cTQ"/>
-                            <constraint firstItem="sSg-VJ-cPh" firstAttribute="leading" secondItem="x7x-Zu-gBN" secondAttribute="leading" id="hfc-TY-x0i"/>
                             <constraint firstItem="EMF-IY-oH0" firstAttribute="leading" secondItem="XKm-cJ-5NL" secondAttribute="leading" id="lSS-fi-9np"/>
                             <constraint firstItem="EMF-IY-oH0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="naV-S0-Fm2"/>
-                            <constraint firstItem="sSg-VJ-cPh" firstAttribute="top" secondItem="x7x-Zu-gBN" secondAttribute="bottom" constant="8" id="vgi-It-dUd"/>
                             <constraint firstItem="XKm-cJ-5NL" firstAttribute="trailing" secondItem="EMF-IY-oH0" secondAttribute="trailing" id="zDV-F8-hvS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="filterButton" destination="sSg-VJ-cPh" id="7vq-pl-fFD"/>
                         <outlet property="generateArrayButton" destination="EMF-IY-oH0" id="M1s-20-Of0"/>
                         <outlet property="resultTextView" destination="hJ2-Zj-ard" id="jDz-oJ-laA"/>
                         <outlet property="sortButton" destination="x7x-Zu-gBN" id="mHI-oA-iA3"/>
+                        <outlet property="sumArrayButton" destination="XKm-cJ-5NL" id="I5R-4d-PdZ"/>
                         <segue destination="R62-T6-pad" kind="presentation" identifier="ToArrayDetails" id="Cqp-wK-E9O"/>
                         <segue destination="7wf-cS-o9b" kind="presentation" identifier="ToGenerateArray" id="9po-k4-7dL"/>
                     </connections>
@@ -235,13 +210,13 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQ6-eY-x6j">
                                         <rect key="frame" x="16" y="220" width="188" height="40"/>
-                                        <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.44497333903066028" green="0.49728763687838839" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="OpP-EX-NOz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
                                         <state key="normal" title="Сгенерировать">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -292,6 +267,7 @@
                     <connections>
                         <outlet property="containerView" destination="0GM-3V-zId" id="tPM-5q-pc6"/>
                         <outlet property="countOfElementsTextField" destination="1V2-PM-u8Y" id="YiR-FZ-gFt"/>
+                        <outlet property="generateArrayButton" destination="SQ6-eY-x6j" id="Zq2-Bx-Ec0"/>
                         <outlet property="intervalFromTextField" destination="msn-KC-M4p" id="exD-iF-kEA"/>
                         <outlet property="intervalToTextField" destination="oVW-Y1-Urn" id="Dfc-FS-W15"/>
                         <outlet property="progressView" destination="MnD-yc-USf" id="COy-Lu-lKz"/>
@@ -317,13 +293,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ET6-uN-ypk">
                                 <rect key="frame" x="16" y="520" width="288" height="40"/>
-                                <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.44497333900000002" green="0.4972876369" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zCf-ke-ZL0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
                                 <state key="normal" title="Назад">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -336,13 +312,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShI-iH-RlV">
                                 <rect key="frame" x="16" y="472" width="288" height="40"/>
-                                <color key="backgroundColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.44497333900000002" green="0.4972876369" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="4Pm-mV-dBu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="14"/>
                                 <state key="normal" title="Очистить массив">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -355,7 +331,7 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T0L-dj-4fv">
                                 <rect key="frame" x="16" y="52.5" width="288" height="411.5"/>
-                                <color key="backgroundColor" red="0.40784313729999999" green="0.4549019608" blue="0.90588235289999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Jq1-F7-ps9">
                                     <size key="itemSize" width="70" height="30"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -419,6 +395,8 @@
                         <viewLayoutGuide key="safeArea" id="PTX-5l-bri"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="ET6-uN-ypk" id="408-CI-AT1"/>
+                        <outlet property="cleararrayButton" destination="ShI-iH-RlV" id="Zlh-Ic-4jf"/>
                         <outlet property="collectionView" destination="T0L-dj-4fv" id="KRg-DL-vZU"/>
                     </connections>
                 </viewController>

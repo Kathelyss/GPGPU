@@ -3,15 +3,26 @@ import UIKit
 class MainVC: UIViewController {
     @IBOutlet var resultTextView: UITextView!
     @IBOutlet var generateArrayButton: UIButton!
+    @IBOutlet var sumArrayButton: UIButton!
     @IBOutlet var sortButton: UIButton!
-    @IBOutlet var filterButton: UIButton!
     var array: [DataType] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         resultTextView.text = ""
-        sortButton.isEnabled = false
-        filterButton.isEnabled = false
+        
+        setupButtons()
+        resultTextView.layer.borderWidth = 1
+        resultTextView.layer.borderColor = #colorLiteral(red: 0.4260271237, green: 0.2024844847, blue: 1, alpha: 1).cgColor
+    }
+    
+    func setupButtons() {
+        generateArrayButton.layer.borderWidth = 1
+        generateArrayButton.layer.borderColor = #colorLiteral(red: 0.4260271237, green: 0.2024844847, blue: 1, alpha: 1).cgColor
+        sumArrayButton.layer.borderWidth = 1
+        sumArrayButton.layer.borderColor = #colorLiteral(red: 0.4260271237, green: 0.2024844847, blue: 1, alpha: 1).cgColor
+        sortButton.layer.borderWidth = 1
+        sortButton.layer.borderColor = #colorLiteral(red: 0.4260271237, green: 0.2024844847, blue: 1, alpha: 1).cgColor
     }
     
     @IBAction func tapSumButton(_ sender: UIButton) {

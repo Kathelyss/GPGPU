@@ -5,6 +5,7 @@ class GenerateArrayVC: UIViewController {
     @IBOutlet var countOfElementsTextField: UITextField!
     @IBOutlet var intervalFromTextField: UITextField!
     @IBOutlet var intervalToTextField: UITextField!
+    @IBOutlet var generateArrayButton: UIButton!
     @IBOutlet var progressView: UIProgressView!
     
     var countOfElements: Int!
@@ -15,6 +16,8 @@ class GenerateArrayVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        generateArrayButton.layer.borderWidth = 1
+        generateArrayButton.layer.borderColor = #colorLiteral(red: 0.4260271237, green: 0.2024844847, blue: 1, alpha: 1).cgColor
         containerView.isUserInteractionEnabled = true
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(closeKeyboard))
