@@ -1,5 +1,7 @@
 import UIKit
 
+typealias DataType = CInt
+
 class MainVC: UIViewController {
     @IBOutlet var resultTextView: UITextView!
     @IBOutlet var generateArrayButton: UIButton!
@@ -33,6 +35,17 @@ class MainVC: UIViewController {
             self.present(ac, animated: true, completion: nil)
         } else {
             resultTextView.text += sumElements(arrayOfNumbers: array)
+        }
+    }
+    
+    @IBAction func tapSortButton(_ sender: UIButton) {
+        if array.isEmpty {
+            let ac = UIAlertController(title: "Так не пойдёт", message: "Сгенерируйте массив", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Понятно", style: .cancel, handler: nil)
+            ac.addAction(action)
+            self.present(ac, animated: true, completion: nil)
+        } else {
+            resultTextView.text += sortElements(arrayOfNumbers: array)
         }
     }
     

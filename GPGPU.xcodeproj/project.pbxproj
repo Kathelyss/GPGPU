@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940AE00421C2DF21000B008C /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940AE00321C2DF21000B008C /* Sorter.swift */; };
+		940AE00621C2E4F4000B008C /* PowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940AE00521C2E4F4000B008C /* PowerTableViewCell.swift */; };
 		9458FE2321B02A770018ACDA /* SummCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458FE2221B02A770018ACDA /* SummCounter.swift */; };
-		9458FE2721B046A40018ACDA /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9458FE2621B046A40018ACDA /* Shader.metal */; };
+		9458FE2721B046A40018ACDA /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9458FE2621B046A40018ACDA /* Shaders.metal */; };
 		9458FE2921B068120018ACDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9458FE2821B068120018ACDA /* Assets.xcassets */; };
 		9458FE2B21B070C20018ACDA /* GenerateArrayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458FE2A21B070C20018ACDA /* GenerateArrayVC.swift */; };
 		9458FE2D21B08E390018ACDA /* ArrayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458FE2C21B08E390018ACDA /* ArrayVC.swift */; };
@@ -20,8 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		940AE00321C2DF21000B008C /* Sorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
+		940AE00521C2E4F4000B008C /* PowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerTableViewCell.swift; sourceTree = "<group>"; };
 		9458FE2221B02A770018ACDA /* SummCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummCounter.swift; sourceTree = "<group>"; };
-		9458FE2621B046A40018ACDA /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		9458FE2621B046A40018ACDA /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		9458FE2821B068120018ACDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9458FE2A21B070C20018ACDA /* GenerateArrayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateArrayVC.swift; sourceTree = "<group>"; };
 		9458FE2C21B08E390018ACDA /* ArrayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayVC.swift; sourceTree = "<group>"; };
@@ -71,10 +75,12 @@
 				9458FE2C21B08E390018ACDA /* ArrayVC.swift */,
 				9458FE2E21B0983C0018ACDA /* ArrayElementCell.swift */,
 				9458FE2221B02A770018ACDA /* SummCounter.swift */,
-				9458FE2621B046A40018ACDA /* Shader.metal */,
+				940AE00321C2DF21000B008C /* Sorter.swift */,
+				9458FE2621B046A40018ACDA /* Shaders.metal */,
 				9458FE2821B068120018ACDA /* Assets.xcassets */,
 				94DF51F321ADC03300713183 /* AppDelegate.swift */,
 				94DF51FF21ADC03600713183 /* Info.plist */,
+				940AE00521C2E4F4000B008C /* PowerTableViewCell.swift */,
 			);
 			path = GPGPU;
 			sourceTree = "<group>";
@@ -150,12 +156,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9458FE2721B046A40018ACDA /* Shader.metal in Sources */,
+				9458FE2721B046A40018ACDA /* Shaders.metal in Sources */,
 				94DF51F621ADC03300713183 /* MainVC.swift in Sources */,
 				94DF51F421ADC03300713183 /* AppDelegate.swift in Sources */,
+				940AE00621C2E4F4000B008C /* PowerTableViewCell.swift in Sources */,
 				9458FE2B21B070C20018ACDA /* GenerateArrayVC.swift in Sources */,
 				9458FE2D21B08E390018ACDA /* ArrayVC.swift in Sources */,
 				9458FE2F21B0983C0018ACDA /* ArrayElementCell.swift in Sources */,
+				940AE00421C2DF21000B008C /* Sorter.swift in Sources */,
 				9458FE2321B02A770018ACDA /* SummCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

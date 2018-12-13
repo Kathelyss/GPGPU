@@ -1,12 +1,10 @@
 import Foundation
 import Metal
 
-typealias DataType = CInt
-
 func sumElements(arrayOfNumbers: [DataType]) -> String {
     let elementsPerSum = Int(arrayOfNumbers.count / 1000) > 10 ? Int(arrayOfNumbers.count / 1000) : 10
     let device = MTLCreateSystemDefaultDevice()!
-    let shader = device.makeDefaultLibrary()!.makeFunction(name: "shader")!
+    let shader = device.makeDefaultLibrary()!.makeFunction(name: "summatorShader")!
     let pipeline = try! device.makeComputePipelineState(function: shader)
     
     // Number of individual results = count / elementsPerSum (rounded up)

@@ -63,6 +63,9 @@
                                         <color key="value" red="0.21357544018912142" green="0.099191335457325364" blue="0.51163943527918776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapSortButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sC-gX-CPM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMF-IY-oH0">
                                 <rect key="frame" x="16" y="40" width="288" height="40"/>
@@ -159,7 +162,7 @@
                                                 <color key="textColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1V2-PM-u8Y">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="16" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1V2-PM-u8Y">
                                                 <rect key="frame" x="0.0" y="38" width="188" height="30"/>
                                                 <color key="textColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
@@ -227,16 +230,55 @@
                                             <action selector="tapCloseButton:" destination="7wf-cS-o9b" eventType="touchUpInside" id="AI4-Y2-iRa"/>
                                         </connections>
                                     </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uq7-mW-Rap">
+                                        <rect key="frame" x="16" y="124" width="188" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="NvZ-Ax-D5U"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="powerCell" id="WiR-Kp-kzt" customClass="PowerTableViewCell" customModule="GPGPU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="188" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WiR-Kp-kzt" id="kfs-qQ-dVM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="188" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x2-cM-eof">
+                                                            <rect key="frame" x="73" y="13.5" width="42.5" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                            <color key="textColor" red="0.42602712370000001" green="0.20248448469999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="4x2-cM-eof" firstAttribute="centerY" secondItem="kfs-qQ-dVM" secondAttribute="centerY" id="bc2-aO-z2s"/>
+                                                        <constraint firstItem="4x2-cM-eof" firstAttribute="centerX" secondItem="kfs-qQ-dVM" secondAttribute="centerX" id="eLa-ok-vah"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="valueLabel" destination="4x2-cM-eof" id="0q0-JZ-srV"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="7wf-cS-o9b" id="bbo-IF-FLT"/>
+                                            <outlet property="delegate" destination="7wf-cS-o9b" id="9LC-YA-h1l"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="AaO-dd-4Am" firstAttribute="leading" secondItem="0GM-3V-zId" secondAttribute="leading" constant="16" id="2Ij-fg-oFO"/>
                                     <constraint firstAttribute="trailing" secondItem="AaO-dd-4Am" secondAttribute="trailing" constant="16" id="3vC-Aa-sfV"/>
+                                    <constraint firstItem="Uq7-mW-Rap" firstAttribute="trailing" secondItem="1V2-PM-u8Y" secondAttribute="trailing" id="4Df-V0-wsd"/>
                                     <constraint firstAttribute="trailing" secondItem="bZP-mQ-WMP" secondAttribute="trailing" constant="16" id="57b-yp-v1B"/>
                                     <constraint firstItem="AaO-dd-4Am" firstAttribute="top" secondItem="bZP-mQ-WMP" secondAttribute="bottom" constant="16" id="CSA-sm-r9L"/>
                                     <constraint firstItem="bZP-mQ-WMP" firstAttribute="leading" secondItem="0GM-3V-zId" secondAttribute="leading" constant="16" id="Fm9-Du-cFu"/>
                                     <constraint firstItem="SQ6-eY-x6j" firstAttribute="top" secondItem="AaO-dd-4Am" secondAttribute="bottom" constant="20" id="Hle-ra-10N"/>
+                                    <constraint firstItem="Uq7-mW-Rap" firstAttribute="leading" secondItem="1V2-PM-u8Y" secondAttribute="leading" id="IwE-HS-AVG"/>
                                     <constraint firstAttribute="trailing" secondItem="SQ6-eY-x6j" secondAttribute="trailing" constant="16" id="P5b-5H-HQb"/>
+                                    <constraint firstItem="Uq7-mW-Rap" firstAttribute="top" secondItem="1V2-PM-u8Y" secondAttribute="bottom" id="Yod-Ki-kD7"/>
                                     <constraint firstAttribute="bottom" secondItem="SQ6-eY-x6j" secondAttribute="bottom" constant="20" id="elY-U5-D8y"/>
                                     <constraint firstAttribute="height" constant="280" id="rfN-qE-utx"/>
                                     <constraint firstItem="bZP-mQ-WMP" firstAttribute="top" secondItem="0GM-3V-zId" secondAttribute="top" constant="16" id="sJz-qx-9In"/>
@@ -270,12 +312,13 @@
                         <outlet property="generateArrayButton" destination="SQ6-eY-x6j" id="Zq2-Bx-Ec0"/>
                         <outlet property="intervalFromTextField" destination="msn-KC-M4p" id="exD-iF-kEA"/>
                         <outlet property="intervalToTextField" destination="oVW-Y1-Urn" id="Dfc-FS-W15"/>
+                        <outlet property="powerTableView" destination="Uq7-mW-Rap" id="uz3-4u-sze"/>
                         <outlet property="progressView" destination="MnD-yc-USf" id="COy-Lu-lKz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmU-bm-qaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="460"/>
+            <point key="canvasLocation" x="924.375" y="459.50704225352115"/>
         </scene>
         <!--ArrayVC-->
         <scene sceneID="Ni7-OQ-psM">
