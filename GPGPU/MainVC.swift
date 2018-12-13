@@ -46,6 +46,7 @@ class MainVC: UIViewController {
             self.present(ac, animated: true, completion: nil)
         } else {
             resultTextView.text += sortElements(arrayOfNumbers: array)
+            array = sortedArray
         }
     }
     

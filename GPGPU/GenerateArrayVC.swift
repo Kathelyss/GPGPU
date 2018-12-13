@@ -86,7 +86,7 @@ extension GenerateArrayVC: UITableViewDelegate {
 
 extension GenerateArrayVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 32
+        return 19
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
