@@ -2,7 +2,6 @@ import Foundation
 
 import Metal
 
-//class Sorter 
 var sortedArray: [DataType] = []
 
 func sortElements(arrayOfNumbers: [DataType]) -> String {
